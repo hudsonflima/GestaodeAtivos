@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using Gestao.Domain.Interfaces;
 using Gestao.Infra.Data.Contexto;
 
@@ -11,7 +13,8 @@ namespace Gestao.Infra.Data.Repositories
 
         public void Add(TEntity obj)
         {
-            throw new NotImplementedException();
+            Db.Set<TEntity>().Add(obj);
+            Db.SaveChanges();
         }
 
         public void Dispose()
@@ -21,22 +24,24 @@ namespace Gestao.Infra.Data.Repositories
 
         public IEnumerable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return Db.Set<TEntity>().ToList();
         }
 
         public TEntity GetById(int id)
         {
-            throw new NotImplementedException();
+            return Db.Set<TEntity>().Find(id);
         }
 
         public void Remove(TEntity obj)
         {
-            throw new NotImplementedException();
+            Db.Set<TEntity>().Remove(obj);
+            Db.SaveChanges();
         }
 
         public void Update(TEntity obj)
         {
-            throw new NotImplementedException();
+            Db.Entry(obj).State = EntityState.Modified;
+            Db.SaveChanges();
         }
     }
 }

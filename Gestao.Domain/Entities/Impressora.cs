@@ -2,12 +2,14 @@
 {
     public class Impressora
     {
+
         public int ImpressoraId { get; set; }
         public string Nome { get; set; }
         public string Setor { get; set; }
         public string EnderecoIp { get; set; }
         public string Marca { get; set; }
         public string Modelo { get; set; }
+        public string NumerodeSerie { get; set; }
         public bool Monocromatica { get; set; }
         public bool Colorida { get; set; }
         //Chave Estrangeira
