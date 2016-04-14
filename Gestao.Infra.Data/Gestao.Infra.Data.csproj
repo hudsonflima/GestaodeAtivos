@@ -31,8 +31,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Contexto\GestorContexto.cs" />
+    <Compile Include="EntityConfig\EstacaoConfiguration.cs" />
+    <Compile Include="EntityConfig\ImpressoraConfiguration.cs" />
+    <Compile Include="EntityConfig\ServidorConfiguration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\RepositoryBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gestao.Domain\Gestao.Domain.csproj">
@@ -52,10 +56,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EntityConfig\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

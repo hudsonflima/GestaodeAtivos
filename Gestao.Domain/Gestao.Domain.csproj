@@ -31,12 +31,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Entities\Estacao.cs" />
-    <Compile Include="Entities\CadastroAplicacao.cs" />
-    <Compile Include="Entities\CadastroComputador.cs" />
-    <Compile Include="Entities\CadastroFuncao.cs" />
-    <Compile Include="Entities\CadastroLicenciamento.cs" />
-    <Compile Include="Entities\CadastroServidor.cs" />
+    <Compile Include="Entities\Impressora.cs" />
     <Compile Include="Entities\Servidor.cs" />
+    <Compile Include="Interfaces\IEstacaoRepository.cs" />
+    <Compile Include="Interfaces\IImpressoraRepository.cs" />
+    <Compile Include="Interfaces\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\IServidorRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -44,7 +44,6 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interfaces\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
