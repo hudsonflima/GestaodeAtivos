@@ -175,6 +175,7 @@
     <Compile Include="AutoMapper\DomainToViewModelMappingProfile.cs" />
     <Compile Include="AutoMapper\ViewModelToDomainMappingProfile.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EstacoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -243,6 +244,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Estacoes\Index.cshtml" />
+    <Content Include="Views\Estacoes\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -259,6 +262,10 @@
     <ProjectReference Include="..\Gestao.Domain\Gestao.Domain.csproj">
       <Project>{691503fd-2919-45db-b670-600b414a2526}</Project>
       <Name>Gestao.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gestao.Infra.Data\Gestao.Infra.Data.csproj">
+      <Project>{1c8337d6-4668-4b5a-8fc2-be2758f31880}</Project>
+      <Name>Gestao.Infra.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
